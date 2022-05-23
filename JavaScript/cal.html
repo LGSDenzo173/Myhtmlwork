@@ -1,0 +1,44 @@
+<html>
+<script>
+function calc(form) {
+
+var D = "0";
+var A = document.getElementById("num1").value;
+var B = document.getElementById("op").value;
+var C = document.getElementById("num2").value;
+
+if (B === "+")
+{
+D = parseInt(A)+parseInt(C);
+}
+else if(B === "-")
+{
+D = parseInt(A)-parseInt(C);
+}
+else if(B === "*")
+{
+D = parseInt(A)*parseInt(C);
+}
+else if (B === "/")
+{
+D = parseInt(A)/parseInt(C);
+}
+document.getElementById("result").innerHTML = D;
+return false;
+}
+</script>
+<body>
+  <h1>Calculator</h1><br><br>
+First Number:
+<input type="text" id="num1" name="num1" /><br><br>
+Enter Operator:
+<input type="text" id="op" name="op" /><br><br>
+Second Number:
+<input type="text" id="num2" name="num2" />
+<br /><br>
+<input type="button" value="Solve" onClick="calc(this)">
+
+<p id="result" name="r1">
+  result is :
+<br />
+</p>
